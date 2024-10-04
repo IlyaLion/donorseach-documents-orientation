@@ -57,15 +57,17 @@
 
 Скорость инференса была измерена на Google Colab CPU - Intel(R) Xeon(R) CPU @ 2.20GHz.
 
-### Матрица ошибок для нашей лучшей модели
+### Матрица ошибок и ROC-кривые для нашей лучшей модели
 
-<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/readme/images/convnext_128-cm.png' height="320" />
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/main/images/convnext_128-cm.png' height="320" />
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/main/images/convnext_128-roc.png' height="320" />
 
 <br>
 
-### Матрица ошибок для нашей самой быстрой модели
+### Матрица ошибок и ROC-кривые для нашей самой быстрой модели
 
-<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/readme/images/convnext_48-cm.png' height="320" />
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/main/images/convnext_48-cm.png' height="320" />
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/main/images/convnext_48-roc.png' height="320" />
 
 <br>
 
