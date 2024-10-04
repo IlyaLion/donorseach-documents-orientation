@@ -52,3 +52,24 @@
 | ConvNeXt-Femto    | 2                 | 48                 | 93.43%   | 43                      | 
 
 Скорость инференса была измерена на Google Colab CPU - Intel(R) Xeon(R) CPU @ 2.20GHz.
+
+### Матрица ошибок для нашей лучшей модели
+
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/readme/images/convnext_128-cm.png' height="320" />
+
+<br>
+
+### Матрица ошибок для нашей самой быстрой модели
+
+<img src='https://github.com/IlyaLion/donorseach-documents-orientation/blob/readme/images/convnext_48-cm.png' height="320" />
+
+<br>
+
+## Выводы
+ - Задачу определения ориентации справки можно решать с высокой точностью
+ - Скорость инференса даже на не очень производительном процессоре достаточно высокая
+ - В качестве модели мы рекомендуем использовать ConvNeXt-Femto с разрешением изображения 128x128 пикселей
+
+## Разработчики
+* [Илья Гурин](https://github.com/IlyaLion) 
+* [Никита Батурин](https://github.com/nktbn)  
