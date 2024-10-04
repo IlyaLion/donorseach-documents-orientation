@@ -1,0 +1,11 @@
+fastapi==0.112.2
+fastapi-cli==0.0.5
+uvicorn==0.31.0
+opencv-python-headless==4.10.0.84
+pillow==10.3.0
+numpy==1.26.4
+albumentations==1.4.17
+timm==1.0.9
+torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
+torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
+python-multipart==0.0.12
