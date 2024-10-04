@@ -1,0 +1,64 @@
+experiment_name: images1194-zero-hgnetv2-128
+seed: 42
+directories:
+  images: data/rvl-cdip-filtered/
+  backgrounds: data/backgrounds/
+  models: models/
+criterion:
+  type: cross_entropy
+dataset:
+  image_size: 128
+  insert_background_p: 0.0
+  background_max_ratio: 1.2
+  data_fraction: 1
+  val_part: 0.2
+  data_loaders:
+    train_batch_size: 16
+    val_batch_size: 32
+  pre_transforms: 
+    - type: longest_max_size
+  train_augmentations:
+    - type: randaugment
+      num_transforms: 2
+      magnitude: 2
+      p: 1
+  val_augmentations: []
+  post_transforms:
+    - type: pad_if_needed
+    - type: normalize
+    - type: to_tensor
+  
+  augmentation_p_schedule:
+    start_p: 0.8 
+    end_p: 0.2 
+    exponent_factor: 2
+model:
+  load_from: null
+  backbone_name: hgnetv2_b1.ssld_stage1_in22k_in1k
+  pretrained: true
+  in_channels: 3
+  n_classes: 4
+optimizer:
+  lr_type: one_lr
+  type: adamw_8bit
+  lr: 8.e-4
+  weight_decay: 1.e-2
+  eps: 1.e-8
+  betas: [0.9, 0.999]
+scheduler:
+  anneal_strategy: linear
+  div_factor: 1000
+  final_div_factor: 10000
+  pct_start: 0.2
+training:
+  compile: false
+  save_checkpoints: true
+  save_metrics: true
+  epochs: 45
+  accumulate_grad_batches: 1
+  max_grad_norm: 1
+  precision: 16
+  mixing:
+    strategy: mixup
+    p: 1.0
+    alpha: 2
